@@ -1,3 +1,12 @@
 <p>
   celebrations works!
 </p>
+<h1>Enrollment Form</h1>
+
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control"  id="name" required type="text" #name formControlName="name" />
+    <small class="text-danger" [class.d-none]="name.valid || name.untouched">Please enter Name</small>
+  </div>
+</form>
